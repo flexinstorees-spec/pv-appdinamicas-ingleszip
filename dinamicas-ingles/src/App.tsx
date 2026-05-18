@@ -274,7 +274,7 @@ export default function App() {
           <div className="plans-grid">
             {/* Basic */}
             <div className="plan-card">
-              <h3>Plano Básico</h3>
+              <h3>Material em PDF</h3>
               <div className="price">
                 <span className="new-price">R$10,00</span>
                 <span className="period">pagamento único</span>
@@ -296,7 +296,7 @@ export default function App() {
               <div className="popular-badge">
                 <i className="fas fa-star" style={{ marginRight: 5 }} /> MAIS ESCOLHIDO
               </div>
-              <h3>Plano Premium</h3>
+              <h3>Aplicativo Completo</h3>
               <div className="price">
                 <span className="old-price">R$97,00</span>
                 <span className="new-price">R$19,90</span>
