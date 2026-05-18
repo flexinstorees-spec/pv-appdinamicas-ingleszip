@@ -71,9 +71,9 @@ function NotificationSystem() {
 }
 
 const faqs = [
-  { q: "Como acesso o app?", a: "Logo após o pagamento você recebe um link no e-mail para criar sua conta e acessar imediatamente — pelo celular, tablet ou computador. Não precisa instalar nada." },
+  { q: "Como acesso o app?", a: "Logo após o pagamento você recebe um link no e-mail para criar sua conta e acessar imediatamente, pelo celular, tablet ou computador. Não precisa instalar nada." },
   { q: "O app serve para qual nível de ensino?", a: "Para todos! O conteúdo vai do 1º ano do Ensino Fundamental ao 3º ano do Ensino Médio, com dinâmicas organizadas por série e adaptadas ao vocabulário e gramática de cada etapa." },
-  { q: "Posso cadastrar mais de uma turma?", a: "No Plano Essencial você cadastra até 2 turmas. No Plano Professor Pro as turmas são ilimitadas — ideal para quem leciona em várias escolas ou séries." },
+  { q: "Posso cadastrar mais de uma turma?", a: "No Plano Essencial você cadastra até 2 turmas. No Plano Professor Pro as turmas são ilimitadas, ideal para quem leciona em várias escolas ou séries." },
   { q: "Preciso adaptar as dinâmicas?", a: "Não. Cada dinâmica já vem pronta para a série e habilidade selecionada. É só abrir o app, escolher e aplicar na aula." },
   { q: "Como funciona o acompanhamento de turma?", a: "Você registra quais dinâmicas aplicou em cada turma, e o app mostra o histórico, frequência de habilidades trabalhadas e sugestões para a próxima aula." },
   { q: "Como funciona a garantia?", a: "Você tem 7 dias para testar o app. Se não fizer sentido pra você, devolvemos 100% do seu dinheiro. Sem perguntas, sem burocracia." },
@@ -116,7 +116,7 @@ function UpgradePopup({ show, onClose }: { show: boolean; onClose: () => void })
           <span className="popup-new-price">R$14,90</span>
         </div>
         <ul className="popup-benefits">
-          <li>App completo — Fundamental ao Médio</li>
+          <li>App completo: Fundamental ao Médio</li>
           <li>Turmas ilimitadas + acompanhamento</li>
           <li>Relatórios de desempenho por turma</li>
           <li>Sugestões automáticas de atividade</li>
@@ -185,9 +185,9 @@ export default function App() {
           <h2 className="section-title">O Que Você Vai Receber</h2>
           <div className="benefits-grid">
             {[
-              { icon: "fa-mobile-screen",   title: "App Completo",                    desc: "Acesse pelo celular, tablet ou computador — a qualquer hora, em qualquer lugar" },
+              { icon: "fa-mobile-screen",   title: "App Completo",                    desc: "Acesse pelo celular, tablet ou computador, a qualquer hora, em qualquer lugar" },
               { icon: "fa-graduation-cap",  title: "Separado por Série",              desc: "Do 1º ano do Fundamental até o 3º ano do Médio, cada série com seu conteúdo próprio" },
-              { icon: "fa-brain",           title: "Filtro por Habilidade",           desc: "Speaking, Listening, Reading, Writing e Grammar — encontre a atividade certa em segundos" },
+              { icon: "fa-brain",           title: "Filtro por Habilidade",           desc: "Speaking, Listening, Reading, Writing e Grammar: encontre a atividade certa em segundos" },
               { icon: "fa-chart-line",      title: "Acompanhamento de Turma",         desc: "Monitore o progresso de cada turma específica e veja a evolução dos seus alunos" },
             ].map((item, i) => (
               <div key={i} className="benefit-card">
@@ -208,7 +208,7 @@ export default function App() {
           <h2 className="section-title">Como Funciona</h2>
           <div className="steps-grid">
             {[
-              { icon: "fa-rocket",             title: "Acesse o App",            desc: "Crie sua conta e entre imediatamente após o pagamento — no celular, tablet ou computador" },
+              { icon: "fa-rocket",             title: "Acesse o App",            desc: "Crie sua conta e entre imediatamente após o pagamento, no celular, tablet ou computador" },
               { icon: "fa-sliders",            title: "Selecione Série e Habilidade", desc: "Filtre por ano escolar e habilidade e encontre a dinâmica perfeita para a sua aula" },
               { icon: "fa-chalkboard-user",    title: "Aplique e Acompanhe",     desc: "Use a dinâmica em aula e registre o progresso de cada turma direto no app" },
             ].map((step, i) => (
@@ -234,7 +234,7 @@ export default function App() {
               { img: "/flashcards-bonus.png", alt: "Banco de atividades",  title: "Banco de Atividades por Série",       value: "R$97", desc: "Centenas de exercícios organizados do 1º ano do Fundamental ao 3º ano do Médio" },
               { img: "/musicas-bonus.png",    alt: "Relatórios",           title: "Relatórios de Desempenho por Turma",  value: "R$67", desc: "Visualize a evolução de cada turma com gráficos claros e fáceis de interpretar" },
               { img: "/desenhos-bonus.png",   alt: "Sugestões",            title: "Sugestões Automáticas de Atividade",  value: "R$53", desc: "O app sugere a dinâmica ideal com base na série, habilidade e última atividade aplicada" },
-              { img: "/certificado-bonus.png",alt: "Atualizações",         title: "Atualizações Mensais de Conteúdo",    value: "R$37", desc: "Novas dinâmicas adicionadas todo mês — seu app sempre atualizado sem custo extra" },
+              { img: "/certificado-bonus.png",alt: "Atualizações",         title: "Atualizações Mensais de Conteúdo",    value: "R$37", desc: "Novas dinâmicas adicionadas todo mês, seu app sempre atualizado sem custo extra" },
             ].map((bonus, i) => (
               <div key={i} className="bonus-card">
                 <div className="bonus-image">
@@ -335,9 +335,9 @@ export default function App() {
           <h2 className="section-title">O Que Nossos Professores Dizem</h2>
           <div className="testimonials-grid">
             {[
-              { img: "/depoimento-1.png", name: "Marina Costa",   role: "Professora de Inglês — 6º ao 9º ano, SP",        text: '"O app mudou completamente minha rotina. Filtro por série e habilidade em segundos, aplico na aula e ainda acompanho o que cada turma já trabalhou. Economizo horas toda semana."' },
-              { img: "/depoimento-2.png", name: "Rafaela Mendes", role: "Professora de Inglês — Ensino Médio, RJ",         text: '"Estava procurando algo que funcionasse para o Médio e achei. As dinâmicas são separadas por série e fazem sentido com o que meus alunos estão vendo. Acabou o improviso!"' },
-              { img: "/depoimento-3.png", name: "Fernanda Lima",  role: "Coordenadora de Inglês — Escola Pública, MG",     text: '"Implantamos o app em toda a escola e a diferença foi visível. Os professores têm material de qualidade para cada turma e os alunos ficaram muito mais engajados."' },
+              { img: "/depoimento-1.png", name: "Marina Costa",   role: "Professora de Inglês, 6º ao 9º ano, SP",        text: '"O app mudou completamente minha rotina. Filtro por série e habilidade em segundos, aplico na aula e ainda acompanho o que cada turma já trabalhou. Economizo horas toda semana."' },
+              { img: "/depoimento-2.png", name: "Rafaela Mendes", role: "Professora de Inglês, Ensino Médio, RJ",         text: '"Estava procurando algo que funcionasse para o Médio e achei. As dinâmicas são separadas por série e fazem sentido com o que meus alunos estão vendo. Acabou o improviso!"' },
+              { img: "/depoimento-3.png", name: "Fernanda Lima",  role: "Coordenadora de Inglês, Escola Pública, MG",     text: '"Implantamos o app em toda a escola e a diferença foi visível. Os professores têm material de qualidade para cada turma e os alunos ficaram muito mais engajados."' },
             ].map((t, i) => (
               <div key={i} className="testimonial-card">
                 <div className="stars">★★★★★</div>
@@ -382,7 +382,7 @@ export default function App() {
       <section className="final-cta-section">
         <div className="container">
           <h2 className="final-cta-title">CHEGA DE IMPROVISAR. SEU APP DE INGLÊS ESTÁ PRONTO.</h2>
-          <p className="final-cta-sub">Dinâmicas por série, acompanhamento de turma e muito mais — tudo no palmo da mão.</p>
+          <p className="final-cta-sub">Dinâmicas por série, acompanhamento de turma e muito mais, tudo no palmo da mão.</p>
           <button className="cta-button" onClick={scrollToPlans}>
             <i className="fas fa-rocket" /> QUERO ACESSAR O APP AGORA
           </button>
@@ -397,7 +397,7 @@ export default function App() {
       {/* Footer */}
       <footer className="footer">
         <div className="container">
-          <p>&copy; 2026 Dinâmicas de Inglês — O App. Todos os direitos reservados.</p>
+          <p>&copy; 2026 Dinâmicas de Inglês. Todos os direitos reservados.</p>
           <p>Plataforma digital licenciada para uso por professores em aulas individuais e instituições de ensino.</p>
         </div>
       </footer>
