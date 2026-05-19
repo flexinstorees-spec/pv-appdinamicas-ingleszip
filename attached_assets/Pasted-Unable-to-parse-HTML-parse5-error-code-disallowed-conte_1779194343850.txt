@@ -1,0 +1,29 @@
+Unable to parse HTML; parse5 error code disallowed-content-in-noscript-in-head
+ at /home/runner/workspace/dinamicas-ingles/index.html:34:7
+32 |      </script>
+33 |      <noscript>
+34 |        <img height="1" width="1" style="display:none"
+   |        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+35 |          src="https://www.facebook.com/tr?id=1624388445449940&ev=PageView&noscript=1" />
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+36 |      </noscript>
+ at /home/runner/workspace/dinamicas-ingles/index.html:34:7
+    at handleParseError (file:///home/runner/workspace/node_modules/.pnpm/vite@6.4.2_@types+node@22.19.19_jiti@2.7.0_lightningcss@1.32.0/node_modules/vite/dist/node/chunks/dep-Dq2t6Dq0.js:36203:9)
+    at Parser.onParseError (file:///home/runner/workspace/node_modules/.pnpm/vite@6.4.2_@types+node@22.19.19_jiti@2.7.0_lightningcss@1.32.0/node_modules/vite/dist/node/chunks/dep-Dq2t6Dq0.js:36116:7)
+    at Parser._err (file:///home/runner/workspace/node_modules/.pnpm/vite@6.4.2_@types+node@22.19.19_jiti@2.7.0_lightningcss@1.32.0/node_modules/vite/dist/node/chunks/dep-CvfTChi5.js:5133:14)
+    at tokenInHeadNoScript (file:///home/runner/workspace/node_modules/.pnpm/vite@6.4.2_@types+node@22.19.19_jiti@2.7.0_lightningcss@1.32.0/node_modules/vite/dist/node/chunks/dep-CvfTChi5.js:6510:7)
+    at startTagInHeadNoScript (file:///home/runner/workspace/node_modules/.pnpm/vite@6.4.2_@types+node@22.19.19_jiti@2.7.0_lightningcss@1.32.0/node_modules/vite/dist/node/chunks/dep-CvfTChi5.js:6488:13)
+    at Parser._startTagOutsideForeignContent (file:///home/runner/workspace/node_modules/.pnpm/vite@6.4.2_@types+node@22.19.19_jiti@2.7.0_lightningcss@1.32.0/node_modules/vite/dist/node/chunks/dep-CvfTChi5.js:5840:17)
+    at Parser._processStartTag (file:///home/runner/workspace/node_modules/.pnpm/vite@6.4.2_@types+node@22.19.19_jiti@2.7.0_lightningcss@1.32.0/node_modules/vite/dist/node/chunks/dep-CvfTChi5.js:5817:18)
+    at Parser.onStartTag (file:///home/runner/workspace/node_modules/.pnpm/vite@6.4.2_@types+node@22.19.19_jiti@2.7.0_lightningcss@1.32.0/node_modules/vite/dist/node/chunks/dep-CvfTChi5.js:5796:14)
+    at Tokenizer.emitCurrentTagToken (file:///home/runner/workspace/node_modules/.pnpm/vite@6.4.2_@types+node@22.19.19_jiti@2.7.0_lightningcss@1.32.0/node_modules/vite/dist/node/chunks/dep-CvfTChi5.js:1697:26)
+    at Tokenizer._stateSelfClosingStartTag (file:///home/runner/workspace/node_modules/.pnpm/vite@6.4.2_@types+node@22.19.19_jiti@2.7.0_lightningcss@1.32.0/node_modules/vite/dist/node/chunks/dep-CvfTChi5.js:3048:22)
+    at Tokenizer._callState (file:///home/runner/workspace/node_modules/.pnpm/vite@6.4.2_@types+node@22.19.19_jiti@2.7.0_lightningcss@1.32.0/node_modules/vite/dist/node/chunks/dep-CvfTChi5.js:1973:22)
+    at Tokenizer._runParsingLoop (file:///home/runner/workspace/node_modules/.pnpm/vite@6.4.2_@types+node@22.19.19_jiti@2.7.0_lightningcss@1.32.0/node_modules/vite/dist/node/chunks/dep-CvfTChi5.js:1537:22)
+    at Tokenizer.write (file:///home/runner/workspace/node_modules/.pnpm/vite@6.4.2_@types+node@22.19.19_jiti@2.7.0_lightningcss@1.32.0/node_modules/vite/dist/node/chunks/dep-CvfTChi5.js:1562:14)
+    at Parser.parse (file:///home/runner/workspace/node_modules/.pnpm/vite@6.4.2_@types+node@22.19.19_jiti@2.7.0_lightningcss@1.32.0/node_modules/vite/dist/node/chunks/dep-CvfTChi5.js:5086:26)
+    at parse (file:///home/runner/workspace/node_modules/.pnpm/vite@6.4.2_@types+node@22.19.19_jiti@2.7.0_lightningcss@1.32.0/node_modules/vite/dist/node/chunks/dep-CvfTChi5.js:8215:19)
+    at traverseHtml (file:///home/runner/workspace/node_modules/.pnpm/vite@6.4.2_@types+node@22.19.19_jiti@2.7.0_lightningcss@1.32.0/node_modules/vite/dist/node/chunks/dep-Dq2t6Dq0.js:36111:15)
+    at async devHtmlHook (file:///home/runner/workspace/node_modules/.pnpm/vite@6.4.2_@types+node@22.19.19_jiti@2.7.0_lightningcss@1.32.0/node_modules/vite/dist/node/chunks/dep-Dq2t6Dq0.js:37503:3)
+    at async applyHtmlTransforms (file:///home/runner/workspace/node_modules/.pnpm/vite@6.4.2_@types+node@22.19.19_jiti@2.7.0_lightningcss@1.32.0/node_modules/vite/dist/node/chunks/dep-Dq2t6Dq0.js:36944:17)
+    at async viteIndexHtmlMiddleware (file:///home/runner/workspace/node_modules/.pnpm/vite@6.4.2_@types+node@22.19.19_jiti@2.7.0_lightningcss@1.32.0/node_modules/vi
