@@ -170,6 +170,9 @@ function AppPreviewSection() {
             {activeTab === "Perfil"     && <PerfilView />}
           </div>
         </div>
+        <p className="app-preview-disclaimer">
+          * Esta é apenas uma prévia ilustrativa do aplicativo. O conteúdo completo estará disponível após a compra.
+        </p>
       </div>
     </section>
   );
