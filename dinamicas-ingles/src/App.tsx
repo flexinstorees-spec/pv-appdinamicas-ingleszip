@@ -562,9 +562,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* FAQ */}
-      <FaqSection />
-
       {/* Guarantee */}
       <section className="guarantee">
         <div className="container">
@@ -585,21 +582,8 @@ export default function App() {
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="final-cta-section">
-        <div className="container">
-          <h2 className="final-cta-title">CHEGA DE IMPROVISAR. SEU APP DE INGLÊS ESTÁ PRONTO.</h2>
-          <p className="final-cta-sub">Dinâmicas por série, acompanhamento de turma e muito mais, tudo no palmo da mão.</p>
-          <button className="cta-button" onClick={scrollToPlans}>
-            <i className="fas fa-rocket" /> QUERO ACESSAR O APP AGORA
-          </button>
-          <div className="delivery-info">
-            <span><i className="fas fa-bolt" /> Acesso imediato</span>
-            <span><i className="fas fa-mobile-screen" /> App para celular e computador</span>
-            <span><i className="fas fa-envelope" /> Link de acesso no e-mail</span>
-          </div>
-        </div>
-      </section>
+      {/* FAQ */}
+      <FaqSection />
 
       {/* Footer */}
       <footer className="footer">
