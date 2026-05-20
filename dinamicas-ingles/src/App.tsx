@@ -1,6 +1,158 @@
 import { useState, useEffect, useCallback } from "react";
 import "./index.css";
 
+const BIBLIOTECA_CARDS = [
+  { tag: "Speaking",   title: "Hot Seat",       sub: "8º EF · Intermediário · 20 min", color: "#818cf8", pct: 70 },
+  { tag: "Vocabulary", title: "Word Bingo",     sub: "6º EF · Básico · 30 min",        color: "#ec4899", pct: 45 },
+  { tag: "Reading",    title: "Jigsaw Reading", sub: "2º EM · Avançado · 45 min",      color: "#10b981", pct: 85 },
+  { tag: "Grammar",    title: "Verb Auction",   sub: "9º EF · Intermediário · 35 min", color: "#3b82f6", pct: 60 },
+  { tag: "Writing",    title: "Story Cubes",    sub: "7º EF · Básico · 40 min",        color: "#f59e0b", pct: 50 },
+  { tag: "Listening",  title: "Song Gap Fill",  sub: "5º EF · Básico · 25 min",        color: "#06b6d4", pct: 40 },
+];
+
+const FAVORITOS_CARDS = [
+  { tag: "Speaking",  title: "Hot Seat",      sub: "8º EF · Intermediário · 20 min", color: "#818cf8", pct: 70 },
+  { tag: "Reading",   title: "Jigsaw Reading",sub: "2º EM · Avançado · 45 min",      color: "#10b981", pct: 85 },
+  { tag: "Listening", title: "Song Gap Fill", sub: "5º EF · Básico · 25 min",        color: "#06b6d4", pct: 40 },
+];
+
+const PLANNER_DAYS = [
+  { day: "Seg", icon: "🗣️", label: "Hot Seat",   filled: true  },
+  { day: "Ter", icon: "📖", label: "Jigsaw",     filled: true  },
+  { day: "Qua", icon: "",   label: "",            filled: false },
+  { day: "Qui", icon: "🎵", label: "Song Fill",  filled: true  },
+  { day: "Sex", icon: "✍️", label: "Story Cube", filled: true  },
+];
+
+const SKILLS = [
+  { label: "Speaking",   color: "#818cf8" },
+  { label: "Listening",  color: "#06b6d4" },
+  { label: "Reading",    color: "#10b981" },
+  { label: "Writing",    color: "#f59e0b" },
+  { label: "Vocabulary", color: "#ec4899" },
+  { label: "Grammar",    color: "#3b82f6" },
+];
+
+function MockCards({ cards }: { cards: typeof BIBLIOTECA_CARDS }) {
+  return (
+    <div className="app-mock-cards">
+      {cards.map((card) => (
+        <div key={card.title} className="app-mock-card">
+          <div className="app-mock-card-tag" style={{ color: card.color }}>{card.tag}</div>
+          <div className="app-mock-card-title">{card.title}</div>
+          <div className="app-mock-card-sub">{card.sub}</div>
+          <div className="app-mock-card-bar">
+            <div className="app-mock-card-fill" style={{ width: `${card.pct}%`, background: card.color }} />
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function PlannerView() {
+  return (
+    <>
+      <div className="app-planner-header">Turma: <strong>7º Ano A</strong></div>
+      <div className="app-planner-grid">
+        {PLANNER_DAYS.map((d) => (
+          <div key={d.day} className="app-planner-day">
+            <div className="app-planner-day-name">{d.day}</div>
+            <div className={`app-planner-slot${d.filled ? " filled" : ""}`}>
+              {d.filled ? (
+                <><span className="app-planner-slot-icon">{d.icon}</span>{d.label}</>
+              ) : (
+                <span style={{ fontSize: 20, opacity: 0.3 }}>+</span>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+    </>
+  );
+}
+
+function PerfilView() {
+  return (
+    <div className="app-perfil-view">
+      <div className="app-perfil-avatar">👩‍🏫</div>
+      <div className="app-perfil-name">Professora Ana</div>
+      <div className="app-perfil-sub">Ensino Fundamental II · São Paulo, SP</div>
+      <div className="app-perfil-stats">
+        <div className="app-perfil-stat"><span className="app-perfil-stat-num">47</span><span className="app-perfil-stat-label">Dinâmicas usadas</span></div>
+        <div className="app-perfil-stat"><span className="app-perfil-stat-num">12</span><span className="app-perfil-stat-label">Semanas ativas</span></div>
+        <div className="app-perfil-stat"><span className="app-perfil-stat-num">3</span><span className="app-perfil-stat-label">Turmas</span></div>
+      </div>
+      <div className="app-perfil-badges">
+        <span className="app-perfil-badge">🏆 Iniciante</span>
+        <span className="app-perfil-badge">🔥 7 dias seguidos</span>
+        <span className="app-perfil-badge">⭐ Top Speaking</span>
+      </div>
+    </div>
+  );
+}
+
+const TABS = ["Biblioteca", "Planejador", "Favoritos", "Perfil"] as const;
+type Tab = typeof TABS[number];
+
+function AppPreviewSection() {
+  const [activeTab, setActiveTab] = useState<Tab>("Biblioteca");
+
+  const tabTitles: Record<Tab, string> = {
+    Biblioteca: "EngActivity — Biblioteca de Dinâmicas",
+    Planejador: "EngActivity — Planejador Semanal",
+    Favoritos:  "EngActivity — Favoritos",
+    Perfil:     "EngActivity — Meu Perfil",
+  };
+
+  return (
+    <section className="app-preview-section">
+      <div className="container">
+        <div className="app-preview-header">
+          <span className="app-preview-tag">Prévia do App</span>
+          <h2 className="section-title">Veja o App por Dentro</h2>
+          <p className="app-preview-desc">Uma amostra real do que você acessa logo após a compra — toque nas abas para explorar.</p>
+        </div>
+
+        <div className="app-skills-strip">
+          {SKILLS.map((s) => (
+            <div key={s.label} className="app-skill-chip">
+              <span className="app-chip-dot" style={{ background: s.color }} />
+              {s.label}
+            </div>
+          ))}
+        </div>
+
+        <div className="app-mockup-wrap">
+          <div className="app-mockup-bar">
+            <span className="app-mockup-dot" style={{ background: "#ff5f57" }} />
+            <span className="app-mockup-dot" style={{ background: "#febc2e" }} />
+            <span className="app-mockup-dot" style={{ background: "#28c840" }} />
+            <span className="app-mockup-title">{tabTitles[activeTab]}</span>
+          </div>
+          <div className="app-mockup-screen">
+            <div className="app-mock-nav">
+              {TABS.map((tab) => (
+                <button
+                  key={tab}
+                  className={`app-mock-tab${activeTab === tab ? " active" : ""}`}
+                  onClick={() => setActiveTab(tab)}
+                >
+                  {tab}
+                </button>
+              ))}
+            </div>
+            {activeTab === "Biblioteca" && <MockCards cards={BIBLIOTECA_CARDS} />}
+            {activeTab === "Planejador" && <PlannerView />}
+            {activeTab === "Favoritos"  && <MockCards cards={FAVORITOS_CARDS} />}
+            {activeTab === "Perfil"     && <PerfilView />}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 
 function getCurrentDate() {
   const d = new Date();
@@ -226,100 +378,7 @@ export default function App() {
       </section>
 
       {/* App Preview */}
-      <section className="app-preview-section">
-        <div className="container">
-          <div className="app-preview-header">
-            <span className="app-preview-tag">Prévia do App</span>
-            <h2 className="section-title">Veja o App por Dentro</h2>
-            <p className="app-preview-desc">Uma amostra real do que você acessa logo após a compra — biblioteca de dinâmicas e planejador semanal, tudo na palma da sua mão.</p>
-          </div>
-
-          <div className="app-skills-strip">
-            {[
-              { label: "Speaking",   color: "#818cf8" },
-              { label: "Listening",  color: "#06b6d4" },
-              { label: "Reading",    color: "#10b981" },
-              { label: "Writing",    color: "#f59e0b" },
-              { label: "Vocabulary", color: "#ec4899" },
-              { label: "Grammar",    color: "#3b82f6" },
-            ].map((s) => (
-              <div key={s.label} className="app-skill-chip">
-                <span className="app-chip-dot" style={{ background: s.color }} />
-                {s.label}
-              </div>
-            ))}
-          </div>
-
-          <div className="app-mockup-wrap">
-            <div className="app-mockup-bar">
-              <span className="app-mockup-dot" style={{ background: "#ff5f57" }} />
-              <span className="app-mockup-dot" style={{ background: "#febc2e" }} />
-              <span className="app-mockup-dot" style={{ background: "#28c840" }} />
-              <span className="app-mockup-title">EngActivity — Biblioteca de Dinâmicas</span>
-            </div>
-            <div className="app-mockup-screen">
-              <div className="app-mock-nav">
-                {["Biblioteca", "Planejador", "Favoritos", "Perfil"].map((tab, i) => (
-                  <div key={tab} className={`app-mock-tab${i === 0 ? " active" : ""}`}>{tab}</div>
-                ))}
-              </div>
-              <div className="app-mock-cards">
-                {[
-                  { tag: "Speaking",   title: "Hot Seat",       sub: "8º EF · Intermediário · 20 min", color: "#818cf8", pct: 70 },
-                  { tag: "Vocabulary", title: "Word Bingo",     sub: "6º EF · Básico · 30 min",        color: "#ec4899", pct: 45 },
-                  { tag: "Reading",    title: "Jigsaw Reading", sub: "2º EM · Avançado · 45 min",      color: "#10b981", pct: 85 },
-                  { tag: "Grammar",    title: "Verb Auction",   sub: "9º EF · Intermediário · 35 min", color: "#3b82f6", pct: 60 },
-                  { tag: "Writing",    title: "Story Cubes",    sub: "7º EF · Básico · 40 min",        color: "#f59e0b", pct: 50 },
-                  { tag: "Listening",  title: "Song Gap Fill",  sub: "5º EF · Básico · 25 min",        color: "#06b6d4", pct: 40 },
-                ].map((card) => (
-                  <div key={card.title} className="app-mock-card">
-                    <div className="app-mock-card-tag" style={{ color: card.color }}>{card.tag}</div>
-                    <div className="app-mock-card-title">{card.title}</div>
-                    <div className="app-mock-card-sub">{card.sub}</div>
-                    <div className="app-mock-card-bar">
-                      <div className="app-mock-card-fill" style={{ width: `${card.pct}%`, background: card.color }} />
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          <div className="app-mockup-wrap app-planner-wrap">
-            <div className="app-mockup-bar">
-              <span className="app-mockup-dot" style={{ background: "#ff5f57" }} />
-              <span className="app-mockup-dot" style={{ background: "#febc2e" }} />
-              <span className="app-mockup-dot" style={{ background: "#28c840" }} />
-              <span className="app-mockup-title">EngActivity — Planejador Semanal</span>
-            </div>
-            <div className="app-mockup-screen">
-              <div className="app-planner-header">
-                Turma: <strong>7º Ano A</strong>
-              </div>
-              <div className="app-planner-grid">
-                {[
-                  { day: "Seg", icon: "🗣️", label: "Hot Seat",    filled: true  },
-                  { day: "Ter", icon: "📖", label: "Jigsaw",      filled: true  },
-                  { day: "Qua", icon: "",   label: "",             filled: false },
-                  { day: "Qui", icon: "🎵", label: "Song Fill",   filled: true  },
-                  { day: "Sex", icon: "✍️", label: "Story Cube",  filled: true  },
-                ].map((d) => (
-                  <div key={d.day} className="app-planner-day">
-                    <div className="app-planner-day-name">{d.day}</div>
-                    <div className={`app-planner-slot${d.filled ? " filled" : ""}`}>
-                      {d.filled ? (
-                        <><span className="app-planner-slot-icon">{d.icon}</span>{d.label}</>
-                      ) : (
-                        <span style={{ fontSize: 20, opacity: 0.3 }}>+</span>
-                      )}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <AppPreviewSection />
 
       {/* Bonus */}
       <section className="bonus-section">
