@@ -342,7 +342,7 @@ function UpgradePopup({ show, onClose }: { show: boolean; onClose: () => void })
 
 export default function App() {
   const [showPopup, setShowPopup] = useState(false);
-  const countdown = useCountdown(1 * 3600 + 35 * 60 + 33);
+  const countdown = useCountdown(15 * 60);
 
   const scrollToPlans = () =>
     document.getElementById("plans")?.scrollIntoView({ behavior: "smooth" });
