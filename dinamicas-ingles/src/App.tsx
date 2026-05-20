@@ -53,22 +53,42 @@ const SKILLS = [
   { label: "Grammar",    color: "#3b82f6" },
 ];
 
-function MockCards({ cards }: { cards: typeof BIBLIOTECA_CARDS }) {
+function CardLockedModal({ card, onClose }: { card: typeof BIBLIOTECA_CARDS[0]; onClose: () => void }) {
   return (
-    <div className="app-mock-cards-scroll">
-      <div className="app-mock-cards">
-        {cards.map((card) => (
-          <div key={card.title} className="app-mock-card">
-            <div className="app-mock-card-tag" style={{ color: card.color }}>{card.tag}</div>
-            <div className="app-mock-card-title">{card.title}</div>
-            <div className="app-mock-card-sub">{card.sub}</div>
-            <div className="app-mock-card-bar">
-              <div className="app-mock-card-fill" style={{ width: `${card.pct}%`, background: card.color }} />
-            </div>
-          </div>
-        ))}
+    <div className="card-locked-overlay" onClick={onClose}>
+      <div className="card-locked-modal" onClick={(e) => e.stopPropagation()}>
+        <div className="card-locked-icon">🔒</div>
+        <div className="card-locked-tag" style={{ color: card.color }}>{card.tag}</div>
+        <div className="card-locked-title">{card.title}</div>
+        <p className="card-locked-desc">
+          O material completo desta dinâmica — roteiro, objetivos, variações e muito mais — estará disponível após a compra.
+        </p>
+        <button className="card-locked-close" onClick={onClose}>Entendi</button>
       </div>
     </div>
+  );
+}
+
+function MockCards({ cards }: { cards: typeof BIBLIOTECA_CARDS }) {
+  const [selected, setSelected] = useState<typeof BIBLIOTECA_CARDS[0] | null>(null);
+  return (
+    <>
+      {selected && <CardLockedModal card={selected} onClose={() => setSelected(null)} />}
+      <div className="app-mock-cards-scroll">
+        <div className="app-mock-cards">
+          {cards.map((card) => (
+            <div key={card.title} className="app-mock-card" onClick={() => setSelected(card)}>
+              <div className="app-mock-card-tag" style={{ color: card.color }}>{card.tag}</div>
+              <div className="app-mock-card-title">{card.title}</div>
+              <div className="app-mock-card-sub">{card.sub}</div>
+              <div className="app-mock-card-bar">
+                <div className="app-mock-card-fill" style={{ width: `${card.pct}%`, background: card.color }} />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </>
   );
 }
 
