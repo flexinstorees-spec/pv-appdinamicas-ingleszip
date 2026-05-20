@@ -408,10 +408,10 @@ export default function App() {
           <h2 className="section-title">Ao Entrar Hoje, Você Também Recebe:</h2>
           <div className="bonus-grid">
             {[
-              { img: "/flashcards-bonus.png", alt: "Banco de atividades",  title: "Banco de Atividades por Série",       value: "R$97", desc: "Centenas de exercícios organizados do 1º ano do Fundamental ao 3º ano do Médio" },
-              { img: "/musicas-bonus.png",    alt: "Relatórios",           title: "Relatórios de Desempenho por Turma",  value: "R$67", desc: "Visualize a evolução de cada turma com gráficos claros e fáceis de interpretar" },
-              { img: "/desenhos-bonus.png",   alt: "Sugestões",            title: "Sugestões Automáticas de Atividade",  value: "R$53", desc: "O app sugere a dinâmica ideal com base na série, habilidade e última atividade aplicada" },
-              { img: "/certificado-bonus.png",alt: "Atualizações",         title: "Atualizações Mensais de Conteúdo",    value: "R$37", desc: "Novas dinâmicas adicionadas todo mês, seu app sempre atualizado sem custo extra" },
+              { img: "/flashcards-bonus.png", alt: "Flashcards de Vocabulário", title: "Flashcards Prontos para Vocabulário",  value: "R$97", desc: "Flashcards organizados por temas para facilitar o ensino de vocabulário de forma visual e dinâmica." },
+              { img: "/musicas-bonus.png",    alt: "Músicas em Inglês",        title: "Músicas Interativas em Inglês",        value: "R$67", desc: "Seleção de músicas educativas para deixar as aulas mais leves, participativas e divertidas." },
+              { img: "/desenhos-bonus.png",   alt: "Desenhos Educativos",      title: "Desenhos Educativos em Inglês",        value: "R$53", desc: "Atividades para colorir e aprender inglês de forma lúdica e envolvente." },
+              { img: "/certificado-bonus.png",alt: "Certificado para Alunos",  title: "Certificado Para os Alunos",           value: "R$37", desc: "Certificados prontos para imprimir e entregar aos alunos ao final das atividades." },
             ].map((bonus, i) => (
               <div key={i} className="bonus-card">
                 <div className="bonus-image">
@@ -491,10 +491,10 @@ export default function App() {
                 <li><i className="fas fa-check check-icon" /> Dinâmicas por série e habilidade</li>
                 <li><i className="fas fa-check check-icon" /> Turmas ilimitadas</li>
                 <li><i className="fas fa-check check-icon" /> Acompanhamento individual de alunos</li>
-                <li className="bonus-item"><i className="fas fa-gift gift-icon" /> BÔNUS: Relatórios de Desempenho por Turma</li>
-                <li className="bonus-item"><i className="fas fa-gift gift-icon" /> BÔNUS: Sugestões Automáticas de Atividade</li>
-                <li className="bonus-item"><i className="fas fa-gift gift-icon" /> BÔNUS: Banco de Atividades por Série</li>
-                <li className="bonus-item"><i className="fas fa-gift gift-icon" /> BÔNUS: Atualizações Mensais de Conteúdo</li>
+                <li className="bonus-item"><i className="fas fa-gift gift-icon" /> BÔNUS: Flashcards Prontos para Vocabulário</li>
+                <li className="bonus-item"><i className="fas fa-gift gift-icon" /> BÔNUS: Músicas Interativas em Inglês</li>
+                <li className="bonus-item"><i className="fas fa-gift gift-icon" /> BÔNUS: Desenhos Educativos em Inglês</li>
+                <li className="bonus-item"><i className="fas fa-gift gift-icon" /> BÔNUS: Certificado Para os Alunos</li>
                 <li><i className="fas fa-check check-icon" /> Acesso vitalício</li>
                 <li><i className="fas fa-check check-icon" /> Garantia de 7 dias</li>
               </ul>
