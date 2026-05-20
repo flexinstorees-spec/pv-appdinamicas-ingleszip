@@ -61,6 +61,7 @@ function CardLockedModal({ card, onClose }: { card: typeof BIBLIOTECA_CARDS[0]; 
   return (
     <div className="card-locked-overlay" onClick={onClose}>
       <div className="card-locked-modal" onClick={(e) => e.stopPropagation()}>
+        <button className="card-locked-x" onClick={onClose}>×</button>
         <div className="card-locked-icon">🔒</div>
         <div className="card-locked-tag" style={{ color: card.color }}>{card.tag}</div>
         <div className="card-locked-title">{card.title}</div>

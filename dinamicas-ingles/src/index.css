@@ -1619,6 +1619,27 @@ section { padding: 56px 0; }
   width: 90%;
   text-align: center;
   box-shadow: 0 16px 48px rgba(0,0,0,0.5);
+  position: relative;
+}
+
+.card-locked-x {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  color: #64748b;
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: inherit;
+  transition: color .15s;
+}
+
+.card-locked-x:hover {
+  color: #f1f5f9;
 }
 
 .card-locked-icon {
