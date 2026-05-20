@@ -1,0 +1,62 @@
+1. Cole o CSS dentro do <style> ou no seu arquivo .css:
+
+@keyframes ticker-v {
+  0%   { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+.vticker-wrapper {
+  max-width: 480px;
+  margin: 0 auto;
+}
+.vticker-viewport {
+  height: 300px; /* ajuste para mostrar mais ou menos itens */
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%);
+}
+.vticker-track {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  animation: ticker-v 16s linear infinite; /* velocidade: aumente para mais lento */
+}
+.vticker-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+  border: 1px solid #e9ecef;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: #333;
+  flex-shrink: 0;
+}
+.vticker-item i {
+  color: #A855F7; /* cor do ícone */
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+2. Cole o HTML onde quiser na página — note que os itens devem ser duplicados para o loop ser perfeito:
+
+<div class="vticker-wrapper">
+  <div class="vticker-viewport">
+    <div class="vticker-track">
+      <!-- ITENS ORIGINAIS -->
+      <div class="vticker-item"><i class="fas fa-check-circle"></i> Item 1</div>
+      <div class="vticker-item"><i class="fas fa-check-circle"></i> Item 2</div>
+      <div class="vticker-item"><i class="fas fa-check-circle"></i> Item 3</div>
+      <div class="vticker-item"><i class="fas fa-check-circle"></i> Item 4</div>
+      <div class="vticker-item"><i class="fas fa-check-circle"></i> Item 5</div>
+      <!-- DUPLICADOS (cópia exata — necessário para o loop contínuo) -->
+      <div class="vticker-item"><i class="fas fa-check-circle"></i> Item 1</div>
+      <div class="vticker-item"><i class="fas fa-check-circle"></i> Item 2</div>
+      <div class="vticker-item"><i class="fas fa-check-circle"></i> Item 3</div>
+      <div class="vticker-item"><i class="fas fa-check-circle"></i> Item 4</div>
+      <div class="vticker-item"><i class="fas fa-check-circle"></i> Item 5</div>
+    </div>
+  </div>
+</div>
