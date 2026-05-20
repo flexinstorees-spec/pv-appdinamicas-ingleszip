@@ -2,12 +2,32 @@ import { useState, useEffect, useCallback } from "react";
 import "./index.css";
 
 const BIBLIOTECA_CARDS = [
-  { tag: "Speaking",   title: "Hot Seat",       sub: "8º EF · Intermediário · 20 min", color: "#818cf8", pct: 70 },
-  { tag: "Vocabulary", title: "Word Bingo",     sub: "6º EF · Básico · 30 min",        color: "#ec4899", pct: 45 },
-  { tag: "Reading",    title: "Jigsaw Reading", sub: "2º EM · Avançado · 45 min",      color: "#10b981", pct: 85 },
-  { tag: "Grammar",    title: "Verb Auction",   sub: "9º EF · Intermediário · 35 min", color: "#3b82f6", pct: 60 },
-  { tag: "Writing",    title: "Story Cubes",    sub: "7º EF · Básico · 40 min",        color: "#f59e0b", pct: 50 },
-  { tag: "Listening",  title: "Song Gap Fill",  sub: "5º EF · Básico · 25 min",        color: "#06b6d4", pct: 40 },
+  { tag: "Speaking",   title: "Hot Seat",           sub: "8º EF · Intermediário · 20 min", color: "#818cf8", pct: 70 },
+  { tag: "Vocabulary", title: "Word Bingo",          sub: "6º EF · Básico · 30 min",        color: "#ec4899", pct: 45 },
+  { tag: "Reading",    title: "Jigsaw Reading",      sub: "2º EM · Avançado · 45 min",      color: "#10b981", pct: 85 },
+  { tag: "Grammar",    title: "Verb Auction",        sub: "9º EF · Intermediário · 35 min", color: "#3b82f6", pct: 60 },
+  { tag: "Writing",    title: "Story Cubes",         sub: "7º EF · Básico · 40 min",        color: "#f59e0b", pct: 50 },
+  { tag: "Listening",  title: "Song Gap Fill",       sub: "5º EF · Básico · 25 min",        color: "#06b6d4", pct: 40 },
+  { tag: "Speaking",   title: "Role Play",           sub: "8º EF · Intermediário · 30 min", color: "#818cf8", pct: 65 },
+  { tag: "Grammar",    title: "Conditional Relay",   sub: "3º EM · Avançado · 40 min",      color: "#3b82f6", pct: 78 },
+  { tag: "Vocabulary", title: "Flashcard Battle",    sub: "6º EF · Básico · 20 min",        color: "#ec4899", pct: 55 },
+  { tag: "Listening",  title: "Dictation Race",      sub: "7º EF · Intermediário · 25 min", color: "#06b6d4", pct: 48 },
+  { tag: "Writing",    title: "Email Writing",       sub: "1º EM · Intermediário · 45 min", color: "#f59e0b", pct: 62 },
+  { tag: "Reading",    title: "Skimming Challenge",  sub: "9º EF · Intermediário · 30 min", color: "#10b981", pct: 73 },
+  { tag: "Speaking",   title: "Debate Club",         sub: "2º EM · Avançado · 50 min",      color: "#818cf8", pct: 88 },
+  { tag: "Vocabulary", title: "Synonym Snap",        sub: "5º EF · Básico · 15 min",        color: "#ec4899", pct: 35 },
+  { tag: "Grammar",    title: "Tense Timeline",      sub: "8º EF · Intermediário · 35 min", color: "#3b82f6", pct: 67 },
+  { tag: "Listening",  title: "Audio Bingo",         sub: "6º EF · Básico · 20 min",        color: "#06b6d4", pct: 42 },
+  { tag: "Writing",    title: "Postcard to a Friend",sub: "7º EF · Básico · 30 min",        color: "#f59e0b", pct: 58 },
+  { tag: "Speaking",   title: "Show & Tell",         sub: "4º EF · Básico · 25 min",        color: "#818cf8", pct: 52 },
+  { tag: "Reading",    title: "True or False Race",  sub: "6º EF · Básico · 20 min",        color: "#10b981", pct: 44 },
+  { tag: "Grammar",    title: "Question Blitz",      sub: "7º EF · Intermediário · 30 min", color: "#3b82f6", pct: 71 },
+  { tag: "Vocabulary", title: "Category Sort",       sub: "5º EF · Básico · 25 min",        color: "#ec4899", pct: 38 },
+  { tag: "Listening",  title: "Podcast Summary",     sub: "3º EM · Avançado · 40 min",      color: "#06b6d4", pct: 80 },
+  { tag: "Writing",    title: "Descriptive Paragraph",sub:"9º EF · Intermediário · 35 min", color: "#f59e0b", pct: 66 },
+  { tag: "Speaking",   title: "Picture Talk",        sub: "5º EF · Básico · 20 min",        color: "#818cf8", pct: 47 },
+  { tag: "Reading",    title: "Speed Reading Quiz",  sub: "1º EM · Intermediário · 30 min", color: "#10b981", pct: 69 },
+  { tag: "Grammar",    title: "Error Hunt",          sub: "8º EF · Intermediário · 25 min", color: "#3b82f6", pct: 56 },
 ];
 
 const FAVORITOS_CARDS = [
