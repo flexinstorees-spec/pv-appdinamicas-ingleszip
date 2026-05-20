@@ -55,17 +55,19 @@ const SKILLS = [
 
 function MockCards({ cards }: { cards: typeof BIBLIOTECA_CARDS }) {
   return (
-    <div className="app-mock-cards">
-      {cards.map((card) => (
-        <div key={card.title} className="app-mock-card">
-          <div className="app-mock-card-tag" style={{ color: card.color }}>{card.tag}</div>
-          <div className="app-mock-card-title">{card.title}</div>
-          <div className="app-mock-card-sub">{card.sub}</div>
-          <div className="app-mock-card-bar">
-            <div className="app-mock-card-fill" style={{ width: `${card.pct}%`, background: card.color }} />
+    <div className="app-mock-cards-scroll">
+      <div className="app-mock-cards">
+        {cards.map((card) => (
+          <div key={card.title} className="app-mock-card">
+            <div className="app-mock-card-tag" style={{ color: card.color }}>{card.tag}</div>
+            <div className="app-mock-card-title">{card.title}</div>
+            <div className="app-mock-card-sub">{card.sub}</div>
+            <div className="app-mock-card-bar">
+              <div className="app-mock-card-fill" style={{ width: `${card.pct}%`, background: card.color }} />
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }
