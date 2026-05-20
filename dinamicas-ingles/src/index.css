@@ -1649,21 +1649,43 @@ section { padding: 56px 0; }
   margin-bottom: 16px;
 }
 
-.card-locked-close {
-  background: #4f46e5;
+.card-locked-cta {
+  width: 100%;
+  background: var(--accent);
   color: #fff;
   border: none;
   border-radius: 8px;
-  padding: 8px 24px;
-  font-size: .85rem;
-  font-weight: 600;
+  padding: 11px 20px;
+  font-size: .88rem;
+  font-weight: 700;
   cursor: pointer;
   font-family: inherit;
-  transition: opacity .18s;
+  margin-bottom: 8px;
+  transition: opacity .18s, transform .18s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+}
+
+.card-locked-cta:hover {
+  opacity: .9;
+  transform: translateY(-1px);
+}
+
+.card-locked-close {
+  background: transparent;
+  color: #64748b;
+  border: none;
+  padding: 6px;
+  font-size: .78rem;
+  cursor: pointer;
+  font-family: inherit;
+  transition: color .18s;
 }
 
 .card-locked-close:hover {
-  opacity: .85;
+  color: #94a3b8;
 }
 
 .app-mock-card-tag {

@@ -54,6 +54,10 @@ const SKILLS = [
 ];
 
 function CardLockedModal({ card, onClose }: { card: typeof BIBLIOTECA_CARDS[0]; onClose: () => void }) {
+  const handleCta = () => {
+    onClose();
+    document.getElementById("plans")?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <div className="card-locked-overlay" onClick={onClose}>
       <div className="card-locked-modal" onClick={(e) => e.stopPropagation()}>
@@ -63,7 +67,10 @@ function CardLockedModal({ card, onClose }: { card: typeof BIBLIOTECA_CARDS[0]; 
         <p className="card-locked-desc">
           O material completo desta dinâmica (roteiro, objetivos, variações e muito mais) estará disponível após a compra.
         </p>
-        <button className="card-locked-close" onClick={onClose}>Entendi</button>
+        <button className="card-locked-cta" onClick={handleCta}>
+          <i className="fas fa-rocket" /> Quero Acessar o App
+        </button>
+        <button className="card-locked-close" onClick={onClose}>Agora não</button>
       </div>
     </div>
   );
