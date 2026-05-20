@@ -1432,6 +1432,7 @@ section { padding: 56px 0; }
 
 .app-preview-section .section-title {
   color: var(--gray-800);
+  margin-bottom: 12px;
 }
 
 .app-preview-desc {
