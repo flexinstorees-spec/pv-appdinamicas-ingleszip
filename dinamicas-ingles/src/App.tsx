@@ -70,7 +70,6 @@ function CardLockedModal({ card, onClose }: { card: typeof BIBLIOTECA_CARDS[0]; 
         <button className="card-locked-cta" onClick={handleCta}>
           <i className="fas fa-rocket" /> Quero Acessar o App
         </button>
-        <button className="card-locked-close" onClick={onClose}>Agora não</button>
       </div>
     </div>
   );
