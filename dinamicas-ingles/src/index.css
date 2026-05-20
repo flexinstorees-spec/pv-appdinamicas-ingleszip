@@ -1407,3 +1407,248 @@ section { padding: 56px 0; }
   .countdown-plans { gap: 8px; }
   .time-unit { min-width: 58px; padding: 10px 8px; }
 }
+
+/* ── App Preview Section ─────────────────────────── */
+.app-preview-section {
+  padding: 80px 0;
+  background: #0f0f1a;
+  overflow: hidden;
+}
+
+.app-preview-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.app-preview-tag {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: #818cf8;
+  margin-bottom: 12px;
+}
+
+.app-preview-section .section-title {
+  color: #f1f5f9;
+}
+
+.app-preview-desc {
+  font-size: 1.05rem;
+  color: #94a3b8;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.app-skills-strip {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.app-skill-chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #1a1a2e;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 999px;
+  padding: 8px 18px;
+  font-size: .9rem;
+  font-weight: 600;
+  color: #f1f5f9;
+  transition: border-color .2s;
+}
+
+.app-skill-chip:hover {
+  border-color: #818cf8;
+}
+
+.app-chip-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.app-mockup-wrap {
+  background: #1a1a2e;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 20px;
+  padding: 12px;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.5);
+  max-width: 860px;
+  margin: 0 auto 32px;
+}
+
+.app-planner-wrap {
+  margin-bottom: 0;
+}
+
+.app-mockup-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px 12px;
+}
+
+.app-mockup-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.app-mockup-title {
+  font-size: .75rem;
+  color: #94a3b8;
+  margin-left: 10px;
+  font-weight: 500;
+}
+
+.app-mockup-screen {
+  background: #0d0d1f;
+  border-radius: 12px;
+  padding: 24px 20px;
+}
+
+.app-mock-nav {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.app-mock-tab {
+  padding: 6px 16px;
+  border-radius: 8px;
+  font-size: .8rem;
+  font-weight: 600;
+  color: #94a3b8;
+  cursor: default;
+}
+
+.app-mock-tab.active {
+  background: #4f46e5;
+  color: #fff;
+}
+
+.app-mock-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.app-mock-card {
+  background: #1a1a2e;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 16px;
+  transition: border-color .2s, transform .2s;
+}
+
+.app-mock-card:hover {
+  border-color: rgba(79,70,229,0.5);
+  transform: translateY(-2px);
+}
+
+.app-mock-card-tag {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.app-mock-card-title {
+  font-size: .85rem;
+  font-weight: 600;
+  color: #f1f5f9;
+  margin-bottom: 4px;
+}
+
+.app-mock-card-sub {
+  font-size: .75rem;
+  color: #94a3b8;
+}
+
+.app-mock-card-bar {
+  height: 4px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 4px;
+  margin-top: 12px;
+  overflow: hidden;
+}
+
+.app-mock-card-fill {
+  height: 100%;
+  border-radius: 4px;
+}
+
+.app-planner-header {
+  font-size: .85rem;
+  color: #94a3b8;
+  margin-bottom: 16px;
+}
+
+.app-planner-header strong {
+  color: #f1f5f9;
+}
+
+.app-planner-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+}
+
+.app-planner-day {
+  text-align: center;
+}
+
+.app-planner-day-name {
+  font-size: .7rem;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  margin-bottom: 6px;
+}
+
+.app-planner-slot {
+  background: #1a1a2e;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px;
+  padding: 10px 6px;
+  font-size: .7rem;
+  color: #94a3b8;
+  min-height: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.app-planner-slot.filled {
+  border-color: rgba(79,70,229,0.5);
+  color: #f1f5f9;
+}
+
+.app-planner-slot-icon {
+  font-size: 16px;
+}
+
+@media (max-width: 640px) {
+  .app-mock-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .app-planner-slot {
+    padding: 8px 4px;
+    font-size: .65rem;
+    min-height: 56px;
+  }
+  .app-planner-slot-icon { font-size: 14px; }
+}
