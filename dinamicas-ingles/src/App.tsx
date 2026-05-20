@@ -132,7 +132,7 @@ function AppPreviewSection() {
       <div className="container">
         <div className="app-preview-header">
           <span className="app-preview-tag">Prévia do Aplicativo</span>
-          <h2 className="section-title">Veja como funciona o aplicativo por dentro e explore algumas das dinâmicas disponíveis.</h2>
+          <h2 className="section-title text-[20px] font-bold">Veja como funciona o aplicativo por dentro...</h2>
           <p className="app-preview-desc">Tudo organizado de forma prática para você encontrar atividades prontas em poucos segundos.</p>
         </div>
 
