@@ -61,7 +61,7 @@ function CardLockedModal({ card, onClose }: { card: typeof BIBLIOTECA_CARDS[0]; 
         <div className="card-locked-tag" style={{ color: card.color }}>{card.tag}</div>
         <div className="card-locked-title">{card.title}</div>
         <p className="card-locked-desc">
-          O material completo desta dinâmica — roteiro, objetivos, variações e muito mais — estará disponível após a compra.
+          O material completo desta dinâmica (roteiro, objetivos, variações e muito mais) estará disponível após a compra.
         </p>
         <button className="card-locked-close" onClick={onClose}>Entendi</button>
       </div>
@@ -141,10 +141,10 @@ function AppPreviewSection() {
   const [activeTab, setActiveTab] = useState<Tab>("Biblioteca");
 
   const tabTitles: Record<Tab, string> = {
-    Biblioteca: "EngActivity — Biblioteca de Dinâmicas",
-    Planejador: "EngActivity — Planejador Semanal",
-    Favoritos:  "EngActivity — Favoritos",
-    Perfil:     "EngActivity — Meu Perfil",
+    Biblioteca: "EngActivity · Biblioteca de Dinâmicas",
+    Planejador: "EngActivity · Planejador Semanal",
+    Favoritos:  "EngActivity · Favoritos",
+    Perfil:     "EngActivity · Meu Perfil",
   };
 
   return (
