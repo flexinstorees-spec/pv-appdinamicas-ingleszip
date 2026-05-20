@@ -1,0 +1,78 @@
+CSS — cole no seu <style> ou arquivo .css:
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.benefit-card {
+  background: #ffffff;
+  padding: 35px 25px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  border: 1px solid rgba(0,0,0,0.06);
+  transition: all 0.3s ease;
+}
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+.benefit-icon {
+  font-size: 2rem;
+  color: white;
+  margin: 0 auto 20px;
+  background: linear-gradient(135deg, #10B981, #34D399);
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(16,185,129,0.35);
+}
+.benefit-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #1a1a1a;
+}
+.benefit-card p {
+  color: #6b7280;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+HTML — cole onde quiser, trocando os textos e ícones:
+
+<!-- Font Awesome (adicione no <head> se não tiver) -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+<div class="benefits-grid">
+  <div class="benefit-card">
+    <div class="benefit-icon"><i class="fas fa-clock"></i></div>
+    <h3>Economize horas de planejamento</h3>
+    <p>Encontre dinâmicas prontas em poucos segundos.</p>
+  </div>
+  <div class="benefit-card">
+    <div class="benefit-icon"><i class="fas fa-star"></i></div>
+    <h3>Aulas mais participativas</h3>
+    <p>Atividades pensadas para prender atenção das crianças.</p>
+  </div>
+  <div class="benefit-card">
+    <div class="benefit-icon"><i class="fas fa-lightbulb"></i></div>
+    <h3>Pare de improvisar</h3>
+    <p>Você sempre terá ideias prontas para aplicar.</p>
+  </div>
+  <div class="benefit-card">
+    <div class="benefit-icon"><i class="fas fa-th-large"></i></div>
+    <h3>Organize melhor sua rotina</h3>
+    <p>Tudo separado dentro do aplicativo.</p>
+  </div>
+  <div class="benefit-card">
+    <div class="benefit-icon"><i class="fas fa-shield-alt"></i></div>
+    <h3>Mais segurança ao ensinar</h3>
+    <p>Saiba exatamente o que aplicar em cada aula.</p>
+  </div>
+</div>
