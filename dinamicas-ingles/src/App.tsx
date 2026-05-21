@@ -380,6 +380,24 @@ export default function App() {
               <i className="fas fa-rocket" /> QUERO ACESSAR O APP!
             </button>
 
+            <div className="vticker-wrapper">
+              <div className="vticker-viewport">
+                <div className="vticker-track">
+                  <div className="vticker-item"><i className="fas fa-check-circle" /> +350 dinâmicas prontas para usar</div>
+                  <div className="vticker-item"><i className="fas fa-check-circle" /> Separadas por série e habilidade</div>
+                  <div className="vticker-item"><i className="fas fa-check-circle" /> Planejador semanal integrado</div>
+                  <div className="vticker-item"><i className="fas fa-check-circle" /> Acompanhamento de turmas</div>
+                  <div className="vticker-item"><i className="fas fa-check-circle" /> Acesso pelo celular, tablet ou PC</div>
+                  <div className="vticker-item"><i className="fas fa-check-circle" /> Atualizações incluídas gratuitamente</div>
+                  <div className="vticker-item"><i className="fas fa-check-circle" /> +350 dinâmicas prontas para usar</div>
+                  <div className="vticker-item"><i className="fas fa-check-circle" /> Separadas por série e habilidade</div>
+                  <div className="vticker-item"><i className="fas fa-check-circle" /> Planejador semanal integrado</div>
+                  <div className="vticker-item"><i className="fas fa-check-circle" /> Acompanhamento de turmas</div>
+                  <div className="vticker-item"><i className="fas fa-check-circle" /> Acesso pelo celular, tablet ou PC</div>
+                  <div className="vticker-item"><i className="fas fa-check-circle" /> Atualizações incluídas gratuitamente</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -432,26 +450,6 @@ export default function App() {
 
       {/* App Preview */}
       <AppPreviewSection />
-
-      {/* Ticker */}
-      <div className="vticker-wrapper">
-        <div className="vticker-viewport">
-          <div className="vticker-track">
-            <div className="vticker-item"><i className="fas fa-check-circle" /> +350 dinâmicas prontas para usar</div>
-            <div className="vticker-item"><i className="fas fa-check-circle" /> Separadas por série e habilidade</div>
-            <div className="vticker-item"><i className="fas fa-check-circle" /> Planejador semanal integrado</div>
-            <div className="vticker-item"><i className="fas fa-check-circle" /> Acompanhamento de turmas</div>
-            <div className="vticker-item"><i className="fas fa-check-circle" /> Acesso pelo celular, tablet ou PC</div>
-            <div className="vticker-item"><i className="fas fa-check-circle" /> Atualizações incluídas gratuitamente</div>
-            <div className="vticker-item"><i className="fas fa-check-circle" /> +350 dinâmicas prontas para usar</div>
-            <div className="vticker-item"><i className="fas fa-check-circle" /> Separadas por série e habilidade</div>
-            <div className="vticker-item"><i className="fas fa-check-circle" /> Planejador semanal integrado</div>
-            <div className="vticker-item"><i className="fas fa-check-circle" /> Acompanhamento de turmas</div>
-            <div className="vticker-item"><i className="fas fa-check-circle" /> Acesso pelo celular, tablet ou PC</div>
-            <div className="vticker-item"><i className="fas fa-check-circle" /> Atualizações incluídas gratuitamente</div>
-          </div>
-        </div>
-      </div>
 
       {/* Bonus */}
       <section className="bonus-section">
