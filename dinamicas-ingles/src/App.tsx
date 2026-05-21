@@ -209,12 +209,7 @@ function AppPreviewSection() {
             >
               <div className="swipe-overlay-content">
                 <div className="scroll-gesture">
-                  <div className="scroll-gesture-hand">
-                    <i className="fas fa-hand" />
-                  </div>
-                  <div className="scroll-gesture-trail">
-                    <span /><span /><span />
-                  </div>
+                  <div className="scroll-finger" />
                 </div>
                 <span className="swipe-overlay-text">Role para explorar</span>
               </div>
