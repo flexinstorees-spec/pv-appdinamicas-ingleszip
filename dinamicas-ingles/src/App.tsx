@@ -451,6 +451,30 @@ export default function App() {
       {/* App Preview */}
       <AppPreviewSection />
 
+      {/* Benefits */}
+      <section className="what-you-get">
+        <div className="container">
+          <h2 className="section-title">Por Que Professores Estão Amando</h2>
+          <div className="benefits-grid">
+            {[
+              { icon: "fa-clock",      title: "Economize horas de planejamento",  desc: "Encontre dinâmicas prontas em poucos segundos, sem precisar criar do zero." },
+              { icon: "fa-star",       title: "Aulas mais participativas",         desc: "Atividades pensadas para prender a atenção e engajar os alunos de verdade." },
+              { icon: "fa-lightbulb",  title: "Pare de improvisar",               desc: "Você sempre terá ideias prontas e organizadas para aplicar na próxima aula." },
+              { icon: "fa-th-large",   title: "Organize melhor sua rotina",        desc: "Tudo separado por série e habilidade dentro do aplicativo, fácil de achar." },
+              { icon: "fa-shield-alt", title: "Mais segurança ao ensinar",         desc: "Saiba exatamente o que aplicar em cada aula e chegue preparado sempre." },
+            ].map((item, i) => (
+              <div key={i} className="benefit-card">
+                <div className="benefit-icon">
+                  <i className={`fas ${item.icon}`} />
+                </div>
+                <h3>{item.title}</h3>
+                <p>{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Bonus */}
       <section className="bonus-section">
         <div className="container">
