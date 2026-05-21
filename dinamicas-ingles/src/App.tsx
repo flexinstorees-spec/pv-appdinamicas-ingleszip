@@ -146,6 +146,7 @@ type Tab = typeof TABS[number];
 
 function AppPreviewSection() {
   const [activeTab, setActiveTab] = useState<Tab>("Biblioteca");
+  const [showHint, setShowHint] = useState(true);
 
   const tabTitles: Record<Tab, string> = {
     Biblioteca: "EngActivity · Biblioteca de Dinâmicas",
@@ -153,6 +154,8 @@ function AppPreviewSection() {
     Favoritos:  "EngActivity · Favoritos",
     Perfil:     "EngActivity · Meu Perfil",
   };
+
+  const dismissHint = () => setShowHint(false);
 
   return (
     <section className="app-preview-section">
@@ -172,7 +175,7 @@ function AppPreviewSection() {
           ))}
         </div>
 
-        <div className="app-mockup-wrap">
+        <div className="app-mockup-wrap" style={{ position: "relative" }}>
           <div className="app-mockup-bar">
             <span className="app-mockup-dot" style={{ background: "#ff5f57" }} />
             <span className="app-mockup-dot" style={{ background: "#febc2e" }} />
@@ -196,11 +199,22 @@ function AppPreviewSection() {
             {activeTab === "Favoritos"  && <MockCards cards={FAVORITOS_CARDS} />}
             {activeTab === "Perfil"     && <PerfilView />}
           </div>
+
+          {showHint && (
+            <div
+              className="swipe-overlay"
+              onMouseDown={dismissHint}
+              onTouchStart={dismissHint}
+              onPointerDown={dismissHint}
+            >
+              <div className="swipe-overlay-content">
+                <span className="swipe-overlay-icon"><i className="fas fa-hand-pointer" /></span>
+                <span className="swipe-overlay-text">Arraste o dedo para explorar</span>
+              </div>
+            </div>
+          )}
         </div>
-        <div className="swipe-hint">
-          <span className="swipe-hint-icon"><i className="fas fa-hand-pointer" /></span>
-          <span className="swipe-hint-text">Arraste o dedo para explorar</span>
-        </div>
+
         <p className="app-preview-disclaimer">
           * Esta é apenas uma prévia ilustrativa do aplicativo. O conteúdo completo estará disponível após a compra.
         </p>
