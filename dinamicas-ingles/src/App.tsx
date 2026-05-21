@@ -197,6 +197,10 @@ function AppPreviewSection() {
             {activeTab === "Perfil"     && <PerfilView />}
           </div>
         </div>
+        <div className="swipe-hint">
+          <span className="swipe-hint-icon"><i className="fas fa-hand-pointer" /></span>
+          <span className="swipe-hint-text">Arraste o dedo para explorar</span>
+        </div>
         <p className="app-preview-disclaimer">
           * Esta é apenas uma prévia ilustrativa do aplicativo. O conteúdo completo estará disponível após a compra.
         </p>

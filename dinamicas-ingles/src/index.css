@@ -1491,6 +1491,33 @@ section { padding: 56px 0; }
   margin-top: 16px;
 }
 
+/* ── Swipe Hint ──────────────────────────────────── */
+@keyframes swipe-slide {
+  0%   { transform: translateX(0);    opacity: 1; }
+  50%  { transform: translateX(14px); opacity: 0.5; }
+  100% { transform: translateX(0);    opacity: 1; }
+}
+.swipe-hint {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 14px;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  font-weight: 500;
+  opacity: 0.75;
+}
+.swipe-hint-icon {
+  display: inline-flex;
+  animation: swipe-slide 1.6s ease-in-out infinite;
+  font-size: 1rem;
+  color: var(--accent);
+}
+.swipe-hint-text {
+  letter-spacing: 0.2px;
+}
+
 .app-skills-strip {
   display: flex;
   gap: 10px;
