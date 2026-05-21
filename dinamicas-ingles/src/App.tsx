@@ -208,8 +208,15 @@ function AppPreviewSection() {
               onPointerDown={dismissHint}
             >
               <div className="swipe-overlay-content">
-                <span className="swipe-overlay-icon"><i className="fas fa-hand-point-down" /></span>
-                <span className="swipe-overlay-text">Arraste o dedo para explorar</span>
+                <div className="scroll-gesture">
+                  <div className="scroll-gesture-hand">
+                    <i className="fas fa-hand" />
+                  </div>
+                  <div className="scroll-gesture-trail">
+                    <span /><span /><span />
+                  </div>
+                </div>
+                <span className="swipe-overlay-text">Role para explorar</span>
               </div>
             </div>
           )}
