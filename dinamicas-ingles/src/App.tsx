@@ -208,7 +208,7 @@ function AppPreviewSection() {
               onPointerDown={dismissHint}
             >
               <div className="swipe-overlay-content">
-                <span className="swipe-overlay-icon"><i className="fas fa-hand-pointer" /></span>
+                <span className="swipe-overlay-icon"><i className="fas fa-hand-point-down" /></span>
                 <span className="swipe-overlay-text">Arraste o dedo para explorar</span>
               </div>
             </div>

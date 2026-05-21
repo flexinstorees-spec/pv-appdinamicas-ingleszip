@@ -1493,9 +1493,9 @@ section { padding: 56px 0; }
 
 /* ── Swipe Overlay ───────────────────────────────── */
 @keyframes swipe-slide {
-  0%   { transform: translateX(0);    opacity: 1; }
-  50%  { transform: translateX(16px); opacity: 0.4; }
-  100% { transform: translateX(0);    opacity: 1; }
+  0%   { transform: translateY(0);    opacity: 1; }
+  50%  { transform: translateY(14px); opacity: 0.4; }
+  100% { transform: translateY(0);    opacity: 1; }
 }
 @keyframes hint-fade-in {
   from { opacity: 0; }
