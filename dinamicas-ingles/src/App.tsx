@@ -570,7 +570,7 @@ export default function App() {
               <h3>Aplicativo Completo</h3>
               <div className="price">
                 <span className="old-price">R$97,00</span>
-                <span className="new-price">R$29,90</span>
+                <span className="new-price">R$19,90</span>
                 <span className="period">pagamento único</span>
                 <div className="savings-amount">Acesso completo + R$254 em bônus inclusos</div>
               </div>
