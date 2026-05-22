@@ -251,14 +251,15 @@ interface Notification {
   name: string;
   location: string;
   time: string;
+  action: string;
 }
 
 const notifMessages = [
-  { name: "Camila R.", location: "Belo Horizonte, MG", time: "há 2 min" },
-  { name: "Patrícia S.", location: "São Paulo, SP", time: "há 5 min" },
-  { name: "Ana C.", location: "Salvador, BA", time: "há 8 min" },
-  { name: "Renata L.", location: "Brasília, DF", time: "há 12 min" },
-  { name: "Fernanda M.", location: "Rio de Janeiro, RJ", time: "há 15 min" },
+  { name: "Camila R.", location: "Belo Horizonte, MG", time: "há 2 min", action: "acabou de garantir acesso ao App! 🎉" },
+  { name: "Patrícia S.", location: "São Paulo, SP", time: "há 5 min", action: "comprou e já está usando as dinâmicas ✅" },
+  { name: "Ana C.", location: "Salvador, BA", time: "há 8 min", action: "garantiu o App + todos os bônus 🚀" },
+  { name: "Renata L.", location: "Brasília, DF", time: "há 12 min", action: "acabou de adquirir o App Dinâmicas 🎯" },
+  { name: "Fernanda M.", location: "Rio de Janeiro, RJ", time: "há 15 min", action: "comprou antes que o preço subisse 🔥" },
 ];
 
 function NotificationSystem() {
@@ -285,7 +286,7 @@ function NotificationSystem() {
           </div>
           <div>
             <div className="notification-name">{n.name}</div>
-            <div className="notification-product">Ativou: App Dinâmicas de Inglês Pro</div>
+            <div className="notification-product">{n.action}</div>
             <div className="notification-location">{n.location} · {n.time}</div>
           </div>
         </div>
