@@ -349,7 +349,7 @@ function UpgradePopup({ show, onClose }: { show: boolean; onClose: () => void })
           <li>Atualizações mensais + Acesso vitalício</li>
         </ul>
         <div className="popup-buttons">
-          <a href="https://pay.wiapy.com/1poJDNpVq" className="popup-btn popup-btn-accept">
+          <a href="https://lastlink.com/p/C65F244E5/checkout-payment/" className="popup-btn popup-btn-accept">
             <i className="fas fa-cart-shopping" /> QUERO COMPRAR!
           </a>
           <a href="https://pay.wiapy.com/dKN7b1zMKv" className="popup-btn popup-btn-decline" onClick={onClose}>
@@ -592,7 +592,7 @@ export default function App() {
                 <li><i className="fas fa-check check-icon" /> Acesso vitalício</li>
                 <li><i className="fas fa-check check-icon" /> Garantia de 7 dias</li>
               </ul>
-              <a href="https://pay.wiapy.com/XtxKw8AtE8" className="plan-button">
+              <a href="https://lastlink.com/p/C8350C4D0/checkout-payment/" className="plan-button">
                 <i className="fas fa-cart-shopping" /> QUERO COMPRAR!
               </a>
             </div>
